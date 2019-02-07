@@ -59,6 +59,10 @@ void loop() {
 
 void packeting(byte Payload[]){
   Payload[0] = (byte) EEPROM.read(UID_ADD);
+  int battery = (int) 80/3;
+  byte byte_2 = (byte) battery << 3;
+  byte_2 = byte_2 | (byte) VERSION;
   Payload[1] = (byte) VERSION;
-  Payload[2] = (byte) 0;//TODO
+  Payload[2] = byte_2;
+
 }
