@@ -4,14 +4,25 @@
   Programme permettant de récupérer les diverses données brutes et de les transférer
   au réseau LoRaWan
 
-  The circuit:
-  * input :
-  * output :
-
   Created 7 February 2019
   By Jean-Cyril Bohy
-  Modified 20 February 2019
+  Modified 10 april 2019
   By Jean-Cyril Bohy
+
+  Done:
+  * communication with LoRaWAN
+  * UID gestion 
+  * Packeting with analogSensorData
+  * Packeting with metaData
+  * Packeting with wind direction and speed
+  
+  TODO:
+  * Sleep and wake up gestion
+  * Gestion of pluviometry
+  * data storage gestion (SD card)
+  * energy optimisation
+  * Downlink LoRaWAN for RTC update
+  * Communication optimisation with Proximus EnCo
 
   https://github.com/cybo12/Pameseb-Node
 
@@ -23,6 +34,7 @@
 #include <SoftwareSerial.h>
 #include "DS3231.h"
 
+// Using DS3231 only for test
 // Init the DS3231 using the hardware interface
 DS3231  rtc(SDA, SCL);
 
