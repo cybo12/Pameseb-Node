@@ -202,8 +202,8 @@ void initialize_radio()
   Serial.println("Trying to join TTN");
   bool join_result = false;
 
-  const char *appEui = "70B3D57ED0017DB0";
-  const char *appKey = "E091E2E4AAB4162594AEC999236863FE";
+  const char *appEui = "";
+  const char *appKey = "";
 
   join_result = myLora.initOTAA(appEui, appKey);
 
